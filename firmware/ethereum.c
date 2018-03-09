@@ -194,7 +194,7 @@ static void send_signature(void)
 		return;
 	}
 
-	memzero(privkey, sizeof(privkey));
+	memset(privkey, 0, sizeof(privkey));
 
 	/* Send back the result */
 	msg_tx_request.has_data_length = false;
